@@ -1,0 +1,70 @@
+
+@import "defaults/elements.less";
+
+@media screen and (max-width: 767px) {
+
+
+      .site_main {
+
+            .site_content  {
+
+
+                  .table_hold {
+                     background: none;
+
+                        > .table {
+                           background: none;
+
+                              > thead,
+                              > tbody {
+
+                                    > tr {
+
+                                          > th,
+                                          > td {
+                                             .box-shadow(0 1px #c1c1c1);
+                                          }
+                                    }
+                              }
+
+
+                              > thead {
+                                 display: none;
+                              }
+
+
+                              > tbody {
+
+                                    > tr {
+                                       background: #fff;
+                                       margin-bottom: 1.5em;
+
+                                          &:nth-child(2n) {
+                                             background: #f1f1f1;
+                                          }
+
+                                          > td {
+                                             padding-top: 50px;
+                                             padding-bottom: 20px;
+                                             position: relative;
+
+                                             &:before {
+                                                position: absolute;
+                                                top: 0px;
+                                                left: 0;
+                                                content: attr(data-title);
+                                                margin-right: 10px;
+                                                width: 100%;
+                                                padding: 10px 1em;
+                                                display: block;
+                                                font-size: 15px;
+                                                background: #c1c1c1;
+                                             }
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}

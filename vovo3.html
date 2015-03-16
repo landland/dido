@@ -5,11 +5,6 @@
       <meta name="description" content="">
       <title>AudienceOwl</title>
 
-      <!-- CSS Semabtic -->
-      <link href="semantic.min.css" rel="stylesheet">
-
-      <!-- Difference CSS -->
-      <link href="css/diff.css" rel="stylesheet">
 
 
       <!-- Fonts -->
@@ -23,11 +18,16 @@
 </head>
 
 <body>
-  <header class="site--header fixed_header">
+</body>
+<template name="layout">
+{{>yield}}
+</template>
+<template name="hello">
+  <header class="dashboard site--header fixed_header">
 
          <div class=" middle aligned padded ui grid">
 
-            <div class="center aligned column sixteen wide mobile three wide tablet three wide computer">
+            <div class="col-lg-3 col-sm-3 col-xs-16 column center aligned">
                <div class="logo">
                  <a href="">
                     <img src="images/logos/audience-owl-logo.png" alt="">
@@ -36,17 +36,17 @@
             </div><!-- logo end -->
 
 
-            <div class="sixteen wide mobile six wide tablet six wide computer column">
+            <div class="col-lg-6 col-sm-6 col-xs-16 column">
                <div class="ui menu">
                   <a class="active item">Profiles</a>
                   <a class="item">Charts</a>
-                  <a class="item {{hi}}">Reports</a>
+                  <a class="item">Reports</a>
                </div>
             </div><!-- menu end -->
 
 
 
-            <div class="sixteen wide mobile seven wide tablet seven wide computer column middle aligned right-part">
+            <div class="col-lg-7 col-sm-7 col-xs-16 column middle aligned right-part">
 
                <a href="" class="ui button upload_btn"><i class="ui icon"></i>UPLOAD</a>
 
@@ -113,7 +113,7 @@
       </header><!-- site header end -->
 
 
-      <section class="site_main close_right_sidebars">
+      <section class="dashboard site_main close_right_sidebars">
 
          <aside class="left_sidebar sidebar">
 
@@ -512,7 +512,7 @@
                                  </div>
                                  <div class="user_info">
 
-                                    <a href="" class="name">Giacomo Guilizzoni</a>
+                                    <a href="{{pathFor 'profile'}}" class="name">Click me</a>
 
                                     <div class="meta">Founter & CEO</div>
 
@@ -1092,9 +1092,975 @@
       <script src="semantic.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
-</body>
+</template>
+<template name="profile">
+  <header class="dashboard site--header">
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+           <div class=" middle aligned padded ui grid">
+
+              <div class="col-lg-3 col-sm-3 col-xs-16 column center aligned">
+                 <div class="logo">
+                   <a href="">
+                      <img src="images/logos/audience-owl-logo.png" alt="">
+                   </a>
+                </div>
+              </div><!-- logo end -->
+
+
+              <div class="col-lg-6 col-sm-6 col-xs-16 column">
+                 <div class="ui menu">
+                    <a class="active item" href="/">Profiles</a>
+                    <a class="item">Charts</a>
+                    <a class="item">Reports</a>
+                 </div>
+              </div><!-- menu end -->
+
+
+
+              <div class="col-lg-7 col-sm-7 col-xs-16 column middle aligned right-part">
+
+                 <a href="" class="ui button upload_btn"><i class="ui icon"></i>UPLOAD</a>
+
+                 <div class="ui dropdown user_select">
+                    <span class="text">
+                       <div class="ui image">
+                          <img src="images/examples/user-1.jpg">
+                       </div>
+                       <div class="middle aligned content">
+                          <h3 class="header">John Smith</h3>
+                          <div class="meta">
+                             <span class="role">Administrator</span>
+                          </div>
+                       </div>
+                    </span>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+
+                       <div class="item">
+                          <div class="ui image">
+                             <img src="images/examples/gallery-3.jpg">
+                          </div>
+                          <div class="middle aligned content">
+                             <h3 class="header">John Smith</h3>
+                             <div class="meta">
+                                <span class="role">Administrator</span>
+                             </div>
+                          </div>
+                       </div>
+
+                       <div class="divider"></div>
+
+                       <div class="item selected">
+                          <div class="ui image">
+                             <img src="images/examples/user-1.jpg">
+                          </div>
+                          <div class="middle aligned content">
+                             <h3 class="header">John John Smith</h3>
+                             <div class="meta">
+                                <span class="role">Administrator</span>
+                             </div>
+                          </div>
+                       </div>
+
+                       <div class="divider"></div>
+
+                       <div class="item">
+                          <div class="ui image">
+                             <img src="images/examples/gallery-3.jpg">
+                          </div>
+                          <div class="middle aligned content">
+                             <h3 class="header">Smith John</h3>
+                             <div class="meta">
+                                <span class="role">Administrator</span>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div><!-- select use end -->
+
+              </div><!-- right part end -->
+
+           </div><!-- grid end -->
+        </header><!-- site header end -->
+
+
+        <section class="dashboard site_main">
+
+           <section class="site_content profile_content">
+
+                 <header class="sort_hold">
+
+
+                    <a href="" class="sort_button sort"><i class="icon icon-star"></i></a>
+
+                    <a href="" class="sort_button sort"><i class="icon icon-msg"></i></a>
+
+                    <a href="" class="sort_button sort"><i class="icon icon-mail"></i></a>
+
+                    <div class="right_part">
+                       <a href="" class="sort_button sort"><i class="icon icon-delete"></i></a>
+                    </div><!-- right end -->
+                 </header><!-- sort end -->
+
+
+                 <div class="ui grid">
+
+                    <div class="column row">
+
+                       <div class="col-xs-16 col-sm-16 col-lg-9 column">
+
+                          <div class="user_hold ui items">
+
+                             <div class="item">
+
+                                <div class="ui medium image">
+
+                                   <div class="img_hold">
+                                      <img src="images/examples/gallery-3.jpg">
+                                      <span class="gender">
+                                         <i class="icon-female icon"></i>
+                                      </span>
+                                   </div>
+
+                                   <span class="ribbon">
+                                      74
+                                      <i class="icon-klout icon"></i>
+                                   </span><!-- ribbon end -->
+
+                                </div>
+
+
+                                   <div class="content">
+                                      <h3 class="header name">Giacomo Guilizzoni</h3>
+                                      <div class="meta">
+                                         <p>iBegin.com - <span class="position"><em>Director of Staff</em></span></p>
+                                      </div>
+
+                                      <div class="extra">
+
+                                         <div class="ui left icon input share_link">
+                                            <input type="text" value="http://url.com/userprofile">
+                                            <i class="linkify icon"></i>
+                                         </div>
+
+                                         <div class="ui list social_list">
+                                            <h4 class="header">Social Media</h4>
+                                             <a class="item">
+                                               <i class="icon-fb icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">Giacomo.Guilizzoni</h5>
+                                               </div>
+                                            </a>
+
+                                            <div class="item">
+                                               <i class="icon-twitter icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">@Giacommo</h5>
+                                               </div>
+                                            </div>
+
+                                            <div class="item">
+                                               <i class="icon-li icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">giacomo.g@gmail.com</h5>
+                                               </div>
+                                            </div>
+                                         </div>
+
+                                         <div class="ui list social_list">
+                                            <h4 class="header">Instant Messengers</h4>
+
+                                             <div class="item">
+                                               <i class="icon-skype icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">Giacomo.Guilizzoni</h5>
+                                               </div>
+                                            </div>
+
+                                            <div class="item">
+                                               <i class="icon-aol icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">giacomo.g@aol.com</h5>
+                                               </div>
+                                            </div>
+
+                                            <div class="item">
+                                               <i class="icon-msn icon"></i>
+                                               <div class="content">
+                                                  <h5 class="header">giacomo.g@hotmail.com</h5>
+                                               </div>
+                                            </div>
+
+                                         </div>
+                                      </div>
+                                   </div><!-- content end -->
+
+                             </div><!-- item end -->
+
+                          </div><!-- user hold end -->
+
+                       </div><!-- column end -->
+
+
+                       <div class="col-xs-16 col-sm-16 col-lg-7 column">
+
+                          <div class="content_info">
+
+                             <div class="ui list two column grid">
+
+                                <div class="item column">
+                                   <i class="middle aligned right icon-location icon"></i>
+                                   <div class="content">
+                                      <div class="header">Address:</div>
+                                      <div class="description">48 str, New York, United States</div>
+                                   </div>
+                                </div>
+
+
+                                <div class="item column">
+                                   <i class="middle aligned right icon-mail icon"></i>
+                                   <div class="content">
+                                      <div class="header">E-Mail:</div>
+                                      <div class="description"><a href="">giacomo.g@gmail.com</a></div>
+                                   </div>
+                                </div>
+                             </div>
+
+                          </div><!-- contact info end -->
+
+
+                          <div class="note_hold">
+                             <div class="ui left icon input">
+                                <textarea placeholder="Note..."></textarea>
+                                <i class="pen-icon icon"></i>
+                                <button class="ui blue labeled icon button">
+                                   <i class="icon-add-note icon"></i>
+                                   Add Note
+                                </button>
+                             </div>
+                          </div>
+
+                       </div><!-- column end -->
+
+                    </div><!-- row end -->
+
+                    <div class="column row">
+
+                       <div class="col-xs-16 col-sm-16 col-lg-9 column">
+                          <div class="organization_box">
+                             <div class="head">
+                                <h3 class="header">Organization: <strong>iBegin.com</strong></h3>
+
+                                <div class="logo">
+                                   <img src="images/logos/begin.jpg" alt="">
+                                </div>
+                             </div><!-- head end -->
+
+                             <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                             </div>
+
+
+                             <div class="content_info">
+
+                                <div class="ui list two column grid">
+
+                                   <div class="item column">
+                                      <i class="middle aligned right icon-location icon"></i>
+                                      <div class="content">
+                                         <div class="header">Address:</div>
+                                         <div class="description">48 str, New York, United States</div>
+                                      </div>
+                                   </div>
+
+
+                                   <div class="item column">
+                                      <i class="middle aligned right icon-website icon"></i>
+                                      <div class="content">
+                                         <div class="header">Website</div>
+                                         <div class="description"><a href="">http://google.com</a></div>
+                                      </div>
+                                   </div>
+                                </div>
+
+                          </div>
+                          </div><!-- box end -->
+                       </div><!-- column end -->
+
+                       <div class="col-xs-16 col-sm-16 col-lg-7 column">
+                          <div class="map_hold">
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44771.06486198431!2d9.18491017209012!3d45.465945066659124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c15d710bfb23%3A0x3b70df84129242b3!2zVmlhIEdpb3Zhbm5pIFJhc29yaSwgOSwgMjAxNDUgTWlsYW5vLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sbg!2sbg!4v1424426747895" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+                          </div>
+                       </div>
+
+                    </div><!-- row end -->
+                 </div><!-- grid end -->
+
+
+                 <div class="ui segment">
+                    <h3 class="ui header">Tags</h3>
+
+                    <div class="tags_list horizontal list">
+                       <div class="item teal buttons">
+                          <a href="" class="button">Personal Development</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Business</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Direct Selling News</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Marketing</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Personal Development</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Business</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Direct Selling News</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Marketing</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Personal Development</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Business</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Direct Selling News</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Marketing</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Personal Development</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Business</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Direct Selling News</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                       <div class="item teal buttons">
+                          <a href="" class="button">Marketing</a>
+                          <a href="" class="button tel-tag"><i class="remove icon"></i></a>
+                       </div>
+                    </div><!-- tags list -->
+
+                    <div class="ui accordion field">
+
+                       <div class="title ui blue labeled icon button">
+                          <i class="icon-add-tag icon"></i>
+                          Add New Tag
+                       </div>
+
+                       <div class="content field">
+                          <div class="ui left icon input">
+                             <input type="text" placeholder="Tag Name...">
+                             <i class="tag-icon icon"></i>
+                             <button class="ui blue button">Add Tag</button>
+                          </div>
+                       </div>
+
+                    </div>
+                 </div><!-- segment end -->
+
+
+                 <div class="ui segment">
+                    <h3 class="ui header">Organizations</h3>
+
+                    <div class="organization_table">
+
+                       <div class="table_fixed">
+                          <table class="ui table table-inbox">
+                             <thead>
+                                <tr>
+                                   <th class="icon four wide"><a href="">Name</a></th>
+                                   <th class="icon four wide"><a href="">Title</a></th>
+                                   <th class="icon three wide"><a href="">Start Date</a></th>
+                                   <th class="icon two wide"><a href="">End Date</a></th>
+                                </tr>
+                             </thead>
+                          </table>
+                       </div><!-- table fixed -->
+
+
+                       <div class="table-body-scroll">
+                          <table class="ui striped table">
+                             <tbody>
+                                 <tr>
+                                     <td class="icon four wide">Deep South Companies</td>
+                                     <td class="icon four wide">Chief Experience Officer</td>
+                                     <td class="icon three wide">1990-01</td>
+                                     <td class="icon two wide">2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Deep South Companies</td>
+                                     <td>Chief Experience Officer</td>
+                                     <td>1990-01</td>
+                                     <td>2004</td>
+                                 </tr>
+                             </tbody>
+                          </table>
+                       </div>
+
+                    </div><!-- oraganization table end -->
+                 </div><!-- segment end -->
+
+
+                 <div class="ui segment">
+                    <h3 class="ui header">Gallery</h3>
+
+                    <div class="gallery_slider">
+                       <ul class="slides">
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-1.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-1.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+
+
+                          <li>
+                             <div class="img_box top">
+                                <a href="images/examples/gallery-3.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-3.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+
+                             <div class="img_box bottom">
+                                <a href="images/examples/gallery-2.jpg" data-lightbox="roadtrip">
+                                   <img src="images/examples/gallery-2.jpg" alt="">
+                                   <span class="hover"></span>
+                                </a>
+                             </div><!-- top box end -->
+                          </li>
+                       </ul>
+                    </div><!-- gallery end -->
+
+                    <ul class="gallery_nav">
+                       <li class="prev"><a href="prev"></a></li>
+                       <li class="bullet"><a href=""></a></li>
+                       <li class="bullet"><a href=""></a></li>
+                       <li class="bullet"><a href=""></a></li>
+                       <li class="next"><a href="next"></a></li>
+                    </ul>
+
+                 </div><!-- segment end -->
+
+
+                 <div class="ui segment">
+                    <h3 class="ui header">Websites</h3>
+
+                    <div class="tags_list horizontal list">
+                       <a href="" class="item "><i class="icon-web icon"></i>www.troy-dolly.blogspot.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydollysumbleupon.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydooly.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydooly.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.directsellingnewsdesk.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troy-dolly.blogspot.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydollysumbleupon.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydooly.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.directsellingnewsdesk.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troy-dolly.blogspot.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydollysumbleupon.com</a>
+                       <a href="" class="item"><i class="icon-web icon"></i>www.troydooly.com</a>
+                    </div><!-- tags list -->
+                 </div><!-- segment end -->
+
+
+                 <div class="ui segment">
+                    <h3 class="ui header">Social Profiles</h3>
+
+                    <table class="ui striped table social_profiles">
+                       <tbody>
+                           <tr>
+                               <td class=" three wide">
+                                   <i class="icon"><img src="images/icons/googleplus.png" alt=""></i> Google Plus
+                               </td>
+                               <td><strong>Giacomo.Guilizzoni</strong></td>
+                               <td class="right aligned collapsing">
+                                   <a href="" class="ui blue button view_profile">View Profile</a>
+                                </td>
+                           </tr>
+
+                           <tr>
+                               <td class=" three wide">
+                                   <i class="icon"><img src="images/icons/digg.png" alt=""></i> Digg
+                               </td>
+                               <td><strong>Giacomo</strong></td>
+                               <td class="right aligned collapsing">
+                                   <a href="" class="ui blue button view_profile">View Profile</a>
+                                </td>
+                           </tr>
+
+                           <tr>
+                               <td class=" three wide">
+                                   <i class="icon"><img src="images/icons/stumble.png" alt=""></i> StumbleUpon
+                               </td>
+                               <td><strong>Giacomo_74</strong></td>
+                               <td class="right aligned collapsing">
+                                   <a href="" class="ui blue button view_profile">View Profile</a>
+                                </td>
+                           </tr>
+
+                           <tr>
+                               <td class=" three wide">
+                                   <i class="icon"><img src="images/icons/yahoo.png" alt=""></i> Yahooo
+                               </td>
+                               <td><strong>Giacomo_G</strong></td>
+                               <td class="right aligned collapsing">
+                                   <a href="" class="ui blue button view_profile">View Profile</a>
+                                </td>
+                           </tr>
+                       </tbody>
+                    </table>
+                 </div>
+           </section><!-- site content end -->
+        </section><!-- Site main end -->
+
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="semantic.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 </template>

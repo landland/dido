@@ -1,0 +1,257 @@
+
+
+/// Tablet scree
+// --------------
+@media screen and (max-width: 991px) {
+
+
+      // Site header
+      // -------------
+      .site--header {
+
+
+            .ui.grid {
+
+                  >.column {
+                     padding: 0;
+                  }
+            }
+
+
+
+            // Site logo
+            // -----------
+            .logo {
+               padding: 1em 0;
+               padding-left: 1em;
+            }
+
+
+
+            // Site menu
+            // ----------
+            .ui.menu {
+               margin: 0;
+               text-align: center;
+
+                  .item {
+                     font-size: 1.2rem;
+                     padding: 1em;
+
+                        &.active,
+                        &:hover {
+                           .box-shadow(none);
+                           background: none;
+                        }
+                  }
+            }
+
+
+            // Upload Button
+            // --------------
+            .upload_btn {
+               padding: 0 1em;
+               margin-right: .8em;
+               line-height: 35px;
+               height: 35px;
+            }
+
+
+
+            // User select
+            // -----------------
+            .user_select {
+
+
+                  .text {
+                     padding: 1em;
+                     width: 200px;
+                  }
+            }
+      }
+
+
+
+
+      // Site main
+      // -------------
+      .site_main {
+
+
+            // sidebars
+            // ------------
+            .sidebar {
+               top: 5rem;
+            }
+
+
+
+
+            // =================
+            // site_content
+            // =================
+            .site_content {
+
+                  // Wrapper
+                  // -----------
+                  .wrapper_content {
+                     padding-top: 5em;
+                  }
+
+
+
+                  // Right part
+                  // -------------
+                  .right_part {
+                     float: none;
+                     display: inline-block;
+                  }
+
+
+                  // Sort
+                  // ------------
+                  .sort {
+                     margin-right: 0;
+                     margin-bottom: .5em;
+                  }
+
+
+
+                  .sort_dropdown {
+                     padding-left: 1em;
+                     padding-top: .7em;
+                     padding-bottom: .7em;
+                     line-height: 1;
+                     padding-right: 3em;
+
+                        i.icon {
+                           width: 30px;
+                        }
+                  }
+
+
+                  // sort button
+                  // ------------
+                  .sort_button {
+                     vertical-align: top;
+                     padding: .662em 1em;
+                  }
+
+
+                  // Pagination
+                  // -----------
+                  .pagination {
+
+                        .item {
+                           padding: .7em 1em;
+                        }
+                  }
+
+
+
+
+                  // ======================
+                  // Table Holder
+                  // ======================
+                  .table_hold {
+
+                        > .table {
+
+
+                              > thead,
+                              > tbody {
+
+                                    > tr {
+
+                                          > th,
+                                          > td {
+                                             padding: 1em;
+                                          }
+                                    }
+                              }
+                        }
+                  }
+            }
+
+
+
+
+            // ===================
+            // Profile content
+            // ===================
+            .profile_content {
+               padding: 2rem 2rem 0 !important;
+
+
+                  > .grid {
+
+                        > .row {
+                           padding-bottom: 0;
+
+                              > .column {
+                                 padding-bottom: 2em;
+                              }
+                        }
+                  }
+
+
+                  .user_hold {
+
+
+                        .image {
+                           width: 230px !important;
+
+                              .img_hold {
+                                 width: 230px;
+                                 height: 230px;
+                              }
+                        }
+
+
+                        > .item {
+
+                              > .content {
+
+                                    > .name {
+                                       font-size: 1.5em;
+                                    }
+
+                              }
+                        }
+
+
+                        .social_list {
+                           // display: block;
+                           // width: 100%;
+
+                              > .header {
+                                 padding-top: 0.5em;
+                                 padding-bottom: 0.5em;
+                              }
+
+
+                              > .item {
+
+                                    > .content {
+
+                                          > .header {
+                                             font-size: 14px;
+                                          }
+                                    }
+                              }
+                        }
+                  }
+
+
+                  .segment {
+
+                        .gallery_nav {
+
+                              .bullet {
+                                 display: none;
+                              }
+                        }
+                  }
+            }
+      }
+}

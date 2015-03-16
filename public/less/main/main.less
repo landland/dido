@@ -1,0 +1,132 @@
+
+
+// Mian section
+// -------------
+.site_main {
+   position: relative;
+   height: 100%;
+
+      @import "sidebar/sidebar.less";
+      @import "content.less";
+      @import "profile.less";
+
+
+      &.close_left_sidebars {
+         overflow: hidden;
+
+
+
+            .left_sidebar {
+               .translate(-264px, 0, 0);
+
+                  .search {
+                     padding-right: 0px;
+                  }
+
+                  .filters {
+
+                        .title-label {
+                           font-size: 0;
+                           color: transparent;
+                           text-align: right;
+                           padding: 20px 6px;
+                        }
+
+
+                        .filter_content {
+                           display: none;
+                        }
+                  }
+
+
+                  // Collapse Sidebar
+                  // ------------------
+                  .collapse_sideber {
+                     font-size: 0;
+                     color: transparent;
+                     text-align: right;
+                     padding-right: .8rem;
+
+                        > .icon {
+                           .scale(-1, 1);
+                        }
+                  }
+            }
+
+
+            .site_content {
+               padding-left: 5rem !important;
+            }
+      }
+
+
+
+      &.close_right_sidebars {
+         overflow: hidden;
+
+
+            .right_sidebar {
+               .translate(100%, 0, 0);
+
+
+                  .right_content {
+                     display: none;
+                  }
+
+
+                  // Top buttons
+                  // -------------
+                  .top_buttons {
+                     width: 45px;
+
+                        > .button {
+                           display: block;
+                           float: none;
+                           padding: 1.5em 0em;
+                           width: auto;
+                        }
+                  }
+
+
+                  // Collapse Sidebar
+                  // ------------------
+                  .collapse_sideber {
+                     font-size: 0;
+                     color: transparent;
+                     text-align: left;
+                     padding-left: .8rem;
+
+                        > .icon {
+                           .scale(1, 1);
+                        }
+                  }
+            }
+
+
+
+            .site_content  {
+               padding-right: 5rem !important;
+            }
+      }
+}
+
+
+
+.touch {
+
+     .site_main .site_content .table_hold {
+         overflow: auto;
+     }
+
+
+     .site_main .profile_content .segment>.organization_table .table-body-scroll {
+         overflow: auto;
+     }
+}
+
+
+.no-touch {
+   .site_main .profile_content .segment > .organization_table .table-body-scroll {
+      //overflow: auto;
+   }
+}
